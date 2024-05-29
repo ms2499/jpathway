@@ -1,0 +1,46 @@
+#title-area h1,h3 {
+    text-align: center;
+}
+
+#input-area {
+    display: flex;
+    flex-wrap: wrap;    
+    height: 11em;
+    margin-left: 17%; 
+}
+
+#output-area {
+    text-align: center;
+}
+
+.col-form-label {
+    width: 10em;
+    margin-right: -1em;
+}
+
+.col-sm-10 {
+    width: 13em;
+    margin-right: 10em;
+}
+
+.comment {
+    width: 50em;
+}
+
+#search {
+    position: fixed;
+    left: 38%;
+    bottom: 5%;
+}
+
+#pageup {
+    position: fixed;
+    left: 48%;
+    bottom: 5%;    
+}
+
+#pagedn {
+    position: fixed;
+    left: 58%;
+    bottom: 5%;    
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>後台管理系統</title>
+    <!-- Jquery JavaScript 文件 -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- 新 Bootstrap5 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+    <!-- axios 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+</head>
+<body>
+    <div id="title-area">
+        <h1>國內期貨系統</h1>
+        <h3><101> 商品資料查詢</h3>
+        <br>
+        <div id="input-area">
+            <div class="mb-3 row">
+                <label for="inputbroker" class="col-sm-2 col-form-label">期貨商代號:</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputbroker" value="F000000">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="inputcomid" class="col-sm-2 col-form-label">商品代號起始:</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputcomid">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="inputstock" class="col-sm-2 col-form-label">證券代號起始:</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputstock">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="inputfee" class="col-sm-2 col-form-label">特定分類(投資人):</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputfee">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="inputupfee" class="col-sm-2 col-form-label">特定分類(上手):</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputupfee">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="inputdnfee" class="col-sm-2 col-form-label">特定分類(下手):</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputdnfee">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="inputprod" class="col-sm-2 col-form-label">契約種類:</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputprod">
+                  <p class="comment">(' ':全部 I:指數類 R:利率類 B:債券類 C:商品類 S:股票類 E:匯率類)</p>
+                </div>
+            </div>                                                            
+        </div>
+    </div>
+    <br>
+    <div id="output-area">
+        <table class="table table-hover table-bordered align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">商品代號</th>
+                    <th scope="col">中文名稱</th>
+                    <th scope="col">最小跳動單位</th>
+                    <th scope="col">升降單位</th>
+                    <th scope="col">契約價值</th>
+                    <th scope="col">交易稅率</th>
+                    <th scope="col">證券代號</th>
+                    <th scope="col">特定分類(投資人)</th>
+                    <th scope="col">特定分類(上手)</th>
+                    <th scope="col">特定分類(下手)</th>
+                    <th scope="col">放寬至漲跌幅度階段</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Mark</td>
+                    <td>Mark</td>
+                </tr> -->
+            </tbody>
+        </table>
+        <div id="page" style="display: none;">
+            <p>第 1 頁</p>
+        </div>
+    </div>
+    <button type="button" class="btn btn-outline-primary funBtn" id="search">查詢</button>
+    <button type="button" class="btn btn-outline-primary funBtn" id="pageup">上一頁</button>
+    <button type="button" class="btn btn-outline-primary funBtn" id="pagedn">下一頁</button>
+
+    <p id="WR-KEY" style="display: none;">              </p>
+    <p id="WR-FIRST-KEY" style="display: none;">              </p>
+    <script src="/static/js/index.js"></script>    
+</body>
+</html>
