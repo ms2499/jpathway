@@ -22,13 +22,6 @@ public class FutureService {
             byte[] greply = new byte[4096]; //pathsend完放資料的array
             IpmHeader ipm = new IpmHeader(); //COBOL那邊定義的IPM-HEADER格式
             ipm.functionCode = funCode;
-            //System.out.println("funcode:"+ipm.functionCode);
-//            System.out.println("getWsExchId:"+fus101.getWsExchId());
-//            System.out.println("getWsCommodityId:"+new String(fus101.getWsCommodityId().getBytes("BIG5"), StandardCharsets.ISO_8859_1));
-//            System.out.println("getWsFeeKind:"+fus101.getWsFeeKind());
-//            System.out.println("getWsUpFeeKind:"+fus101.getWsUpFeeKind());
-//            System.out.println("getWsStockNo:"+fus101.getWsStockNo());
-//            System.out.println("getWsProdKing:"+fus101.getWsProdKing());
 
             //Debug用
 //            Field[] fields = fus101.getClass().getFields();
